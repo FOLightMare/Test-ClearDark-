@@ -699,6 +699,11 @@ code {
   color: var(--text-strong);
 }
 
+.c19a557985eb7793-avatarDecoration {
+  top: -2px;
+  left: -54px;
+}
+
 .bab7519355c8eed6-operations a {
   color: var(--hsl-main-color);
 }
