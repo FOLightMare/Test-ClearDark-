@@ -350,7 +350,7 @@
   &:after { right: 0; }
 }
 
-#{c(chat divider dividerUnread)} {
+#{c(chat divider isUnread)} {
   border-color: hsla(var(--accent-hsl), var(--accent-opacity));
 
   #{c(chat divider unreadPill)} {
