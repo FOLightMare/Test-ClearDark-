@@ -24,6 +24,16 @@
   left: -54px;
 }
 
+// ACCESSIBILITY
+.a11y-font-scaled-down {
+  #{c(chat chatAvatar)} {
+    &:not(#{c(chat compact)}) {
+      top: 0;
+      left: -50px;
+    }
+  }
+}
+
 // EDITING
 #{c(chat operations)} {
   a {
