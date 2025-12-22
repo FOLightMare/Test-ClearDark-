@@ -639,7 +639,6 @@ $classes: (
       'avatar': '_44b0c28be7879b7b-avatar',
       // <img> ; has ::before
       // <svg>
-      'avatarDecoration': '.c19a557985eb7793-avatarDecoration',
       'cursorDefault': '_44b0c28be7879b7b-cursorDefault',
       // on <svg> tag. child <mask> with similar stuff again
       // <rect>
@@ -962,6 +961,7 @@ $classes: (
 
   'chat': (
     'cozy': 'c19a557985eb7793-cozy',
+    'avatarDecoration': '.c19a557985eb7793-avatarDecoration',
     'compact': 'c19a557985eb7793-compact',
     'chat': 'f75fb00fb7356cbe-chat',
     'chatSidebarOpen': 'chatSidebarOpen_d880dc',
