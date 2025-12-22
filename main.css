@@ -688,6 +688,11 @@ code {
 
 /*! ClearDark+ v2.3.1 by Lighty.Jr */
 .c19a557985eb7793-avatar {
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: -50px;
+  margin-top: 0;
   transition: all 0.3s ease-in-out, transform 0.1s ease-in-out;
 }
 .c19a557985eb7793-avatar.c19a557985eb7793-clickable:active {
