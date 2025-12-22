@@ -709,6 +709,11 @@ code {
   left: -54px;
 }
 
+.a11y-font-scaled-down .c19a557985eb7793-avatar:not(.c19a557985eb7793-compact) {
+  top: 0;
+  left: -50px;
+}
+
 .bab7519355c8eed6-operations a {
   color: var(--hsl-main-color);
 }
