@@ -325,13 +325,13 @@
 
 // DIVIDERS
 #{c(chat messageListItem)},
-#{c(chat divider)} {
+#{c(chat divider divider)} {
   + #{c(chat message)} {
     margin-top: 2px;
   }
 }
 
-#{c(chat divider)}#{c(chat hasContent)} {
+#{c(chat divider divider)}#{c(chat divider hasContent)} {
   border-top: none;
 
   &:before,
@@ -350,20 +350,20 @@
   &:after { right: 0; }
 }
 
-#{c(chat dividerUnread)} {
+#{c(chat divider dividerUnread)} {
   border-color: hsla(var(--accent-hsl), var(--accent-opacity));
 
-  #{c(chat unreadPill)} {
+  #{c(chat divider unreadPill)} {
     background-color: hsla(var(--accent-hsl), var(--accent-opacity));
     color: var(--accent-text-color);
     text-shadow: none;
   }
 
-  #{c(chat unreadPillCap)} {
+  #{c(chat divider unreadPillCap)} {
     filter: none;
   }
 
-  #{c(chat unreadPillCapStroke)} {
+  #{c(chat divider unreadPillCapStroke)} {
     color: hsla(var(--accent-hsl), var(--accent-opacity));
     fill: hsla(var(--accent-hsl), var(--accent-opacity));
   }
