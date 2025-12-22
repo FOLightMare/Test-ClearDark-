@@ -322,3 +322,49 @@
 #{c(chat scrollerSpacer)} {
   height: var(--space-16);
 }
+
+// DIVIDERS
+#{c(chat messageListItem)},
+#{c(chat divider)} {
+  + #{c(chat message)} {
+    margin-top: 2px;
+  }
+}
+
+#{c(chat divider)}#{c(chat hasContent)} {
+  border-top: none;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: " ";
+    width: calc(50% - 60px);
+    height: 1px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    background-color: var(--background-modifier-accent);
+  }
+
+  &:before { left: 0; }
+  &:after { right: 0; }
+}
+
+#{c(chat dividerUnread)} {
+  border-color: hsla(var(--accent-hsl), var(--accent-opacity));
+
+  #{c(chat unreadPill)} {
+    background-color: hsla(var(--accent-hsl), var(--accent-opacity));
+    color: var(--accent-text-color);
+    text-shadow: none;
+  }
+
+  #{c(chat unreadPillCap)} {
+    filter: none;
+  }
+
+  #{c(chat unreadPillCapStroke)} {
+    color: hsla(var(--accent-hsl), var(--accent-opacity));
+    fill: hsla(var(--accent-hsl), var(--accent-opacity));
+  }
+}
