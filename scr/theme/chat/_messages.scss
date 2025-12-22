@@ -235,7 +235,7 @@
   &#{c(chat hasThread)} {
     // cozy view
     &::after {
-      border-color: cv('color.main');
+      display: none;
     }
   }
 }
@@ -316,4 +316,9 @@
 #{c(embeds poll votedStyles)} {
   --custom-poll-style-vote-percentage: hsl(from var(--hsl-main-color) h s l/.2);
   --custom-poll-style-border: var(--hsl-main-color);
+}
+
+// SCROLLER
+#{c(chat scrollerSpacer)} {
+  height: var(--space-16);
 }
