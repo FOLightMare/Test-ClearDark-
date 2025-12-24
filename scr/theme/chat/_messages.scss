@@ -1,9 +1,5 @@
 @use 'backend' as *;
 
-/*
- * MESSAGES (Converted from Root)
- */
-
 // BACKGROUND FLASH
 #{c(chat, messageBackgroundFlash)} {
 	&:not([style$="0);"]) {
