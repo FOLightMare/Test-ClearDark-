@@ -215,7 +215,7 @@
     border-color: var(--message-color);
 	transition: 300ms ease border-color;
 
-	&#{c(chat, replied contentHovered)} {
+	&#{c(chat replied contentHovered)} {
         border-color: var(--message-color-hover);
     }
 }
