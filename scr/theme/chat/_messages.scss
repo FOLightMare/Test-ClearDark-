@@ -31,7 +31,7 @@
 	transition: 300ms ease background-color;
 
 	&:not(#{c(chat messageGroupStart)}),
-    &#{c(chat, compact)} {
+    &#{c(chat compact)} {
     	margin-top: 2px;
     }
 
@@ -44,13 +44,13 @@
 
 	&#{c(chat cozy)} {
 		#{c(chat timestamp)} {
-			&#{c(chat, timestampAlt)} {
+			&#{c(chat timestampAlt)} {
 				left: -62px;
 			}
 		}
 	}
 
-	&#{c(chat, compact)} {
+	&#{c(chat compact)} {
 		padding: 4px;
 		padding-left: 6px;
 
@@ -77,7 +77,7 @@
 		}
 	}
 
-	#{c(chat, channelTextArea)} {
+	#{c(chat channelTextArea)} {
         margin: 2px 0;
     }
 
