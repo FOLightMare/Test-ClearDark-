@@ -1,7 +1,7 @@
 @use 'backend' as *;
 
 // BACKGROUND FLASH
-#{c(chat, messageBackgroundFlash)} {
+#{c(chat BackgroundFlash)} {
 	&:not([style$="0);"]) {
 		background-color: hsla(var(--accent-hsl), 0.3) !important;
 		transition: 200ms ease-out background-color;
@@ -14,8 +14,8 @@
 }
 
 // HOVER MODE
-#{c(main, fullMotion)} {
-	#{c(chat, message)} {
+#{c(main options fullMotion)} {
+	#{c(chat message)} {
 		&:hover {
 			background-color: var(--message-color-hover) !important;
 		}
@@ -23,27 +23,27 @@
 }
 
 // MESSAGES WRAPPER
-#{c(chat, message)} {
+#{c(chat message)} {
 	margin-left: 68px;
 	margin-right: 16px;
 	background-color: var(--message-color) !important;
 	border-radius: var(--message-radius);
 	transition: 300ms ease background-color;
 
-	&:not(#{c(chat, messageGroupStart)}),
+	&:not(#{c(chat messageGroupStart)}),
     &#{c(chat, compact)} {
     	margin-top: 2px;
     }
 
-	&#{c(chat, cozy)},
-	&#{c(chat, compact)} {
+	&#{c(chat cozy)},
+	&#{c(chat compact)} {
 		padding: var(--message-padding-top) var(--message-padding-side) !important;
 		padding-right: 8px !important;
 		border: 2px solid transparent;
 	}
 
-	&#{c(chat, cozy)} {
-		#{c(chat, timestamp)} {
+	&#{c(chat cozy)} {
+		#{c(chat timestamp)} {
 			&#{c(chat, timestampAlt)} {
 				left: -62px;
 			}
@@ -54,25 +54,25 @@
 		padding: 4px;
 		padding-left: 6px;
 
-		#{c(chat, timestamp)} {
+		#{c(chat timestamp)} {
 			margin-right: 0.75rem;
 		}
 	}
 
-	&#{c(chat, hasReply)} {
-        #{c(chat, chatAvatar)} {
+	&#{c(chat hasReply)} {
+        #{c(chat chatAvatar)} {
             top: 28px;
         }
 
-        #{c(chat, avatarDecoration)} {
+        #{c(chat avatarDecoration)} {
             top: 26px;
         }
     }
 
-	#{c(chat, timestamp)} {
+	#{c(chat timestamp)} {
 		color: var(--text-normal);
 
-		&#{c(chat, timestampAlt)}  {
+		&#{c(chat timestampAlt)}  {
 			color: var(--text-normal);
 		}
 	}
@@ -82,7 +82,7 @@
     }
 
 	// MENTIONED BG
-	&#{c(chat, mentioned)} {
+	&#{c(chat mentioned)} {
         border-color: hsla(var(--mention-hsl),var(--mention-opacity));
     	box-shadow: 0px 0px 13px 4px hsla(var(--mention-hsl),var(--mention-opacity));
 
@@ -90,20 +90,20 @@
             display: none;
         }
 
-		#{c(chat, replied)} {
+		#{c(chat replied message)} {
 			&:before {
 				border-color: hsl(var(--mention-hsl));
 			}
 		}
 
-		#{c(chat, repliedSpine)} {
+		#{c(chat replied spine)} {
 	        --message-color: hsl(var(--mention-hsl));
 	        --message-color-hover: hsl(var(--mention-hsl));
 	    }
     }
 
 	// REPLY HIGHLIGHT
-    &#{c(chat, replying)} {
+    &#{c(chat replying)} {
         border-color: hsla(var(--reply-hsl),var(--reply-opacity));
     	box-shadow: 0px 0px 13px 4px hsla(var(--reply-hsl),var(--reply-opacity));
 
@@ -114,12 +114,12 @@
 }
 
 // SCROLLER & THREADS
-#{c(chat, scrollerSpacer)} {
+#{c(chat scrollerSpacer)} {
 	height: var(--space-16);
 }
 
-#{c(chat, cozy)} {
-	&#{c(chat, hasThread)} {
+#{c(chat cozy)} {
+	&#{c(chat hasThread)} {
 		&::after {
 			display: none;
 		}
@@ -127,7 +127,7 @@
 }
 
 // HEADER (Avatars)
-#{c(chat, chatAvatar)} {
+#{c(chat chatAvatar)} {
 	width: 40px;
 	height: 40px;
 	top: 0;
@@ -135,14 +135,14 @@
 	margin-top: 0;
 }
 
-#{c(chat, avatarDecoration)} {
+#{c(chat avatarDecoration)} {
 	top: -2px;
 	left: -54px;
 }
 
 .a11y-font-scaled-down {
-	#{c(chat, chatAvatar)} {
-		&:not(#{c(chat, compact)}) {
+	#{c(chat chatAvatar)} {
+		&:not(#{c(chat compact)}) {
 			top: 0;
 			left: -50px;
 		}
@@ -150,14 +150,14 @@
 }
 
 // DIVIDERS
-#{c(chat, messageListItem)},
-#{c(chat, divider)} {
-	+ #{c(chat, message)} {
+#{c(chat messageListItem)},
+#{c(chat divider divider)} {
+	+ #{c(chat messageDivider)} {
 		margin-top: 2px;
 	}
 }
 
-#{c(chat, divider)}#{c(chat, hasContent)} {
+#{c(chat divider divider)}#{c(chat divider hasContent)} {
 	border-top: none;
 
 	&:before,
@@ -176,46 +176,46 @@
 	&:after { right: 0; }
 }
 
-#{c(chat, dividerDate)} {
+#{c(chat divider content)} {
 	width: 120px;
 	padding: 2px 0;
 	background-color: var(--message-color);
 	text-align: center;
 }
 
-#{c(chat, dividerUnread)} {
+#{c(chat divider isUnread)} {
 	border-color: hsla(var(--accent-hsl),var(--accent-opacity));
 
-	#{c(chat, unreadPill)} {
+	#{c(chat divider unreadPill)} {
 		background-color: hsla(var(--accent-hsl),var(--accent-opacity));
 		color: var(--accent-text-color);
 		text-shadow: none;
 	}
 
-	#{c(chat, unreadPillCap)} {
+	#{c(chat divider unreadPillCap)} {
         filter: none;
     }
 
-	#{c(chat, unreadPillCapStroke)} {
+	#{c(chat divider unreadPillCapStroke)} {
 		color: hsla(var(--accent-hsl),var(--accent-opacity));
 		fill: hsla(var(--accent-hsl),var(--accent-opacity));
 	}
 }
 
 // REPLIES LOGIC
-#{c(chat, replied)} {
+#{c(chat replied message)} {
 	&:before {
 		border-color: var(--message-color);
 		transform: translateX(-6px);
     }
 }
 
-#{c(chat, repliedSpine)} {
+#{c(chat replied spine)} {
     margin-inline: calc(var(--spine-width)*-1/2) calc(var(--reply-spacing) * 2.3);
     border-color: var(--message-color);
 	transition: 300ms ease border-color;
 
-	&#{c(chat, repliedSpineHovered)} {
+	&#{c(chat, replied contentHovered)} {
         border-color: var(--message-color-hover);
     }
 }
