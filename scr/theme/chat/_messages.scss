@@ -1,7 +1,7 @@
 @use 'backend' as *;
 
 // BACKGROUND FLASH
-#{c(chat BackgroundFlash)} {
+#{c(chat backgroundFlash)} {
 	&:not([style$="0);"]) {
 		background-color: hsla(var(--accent-hsl), 0.3) !important;
 		transition: 200ms ease-out background-color;
