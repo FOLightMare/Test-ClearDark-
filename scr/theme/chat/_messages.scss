@@ -29,6 +29,7 @@
 	background-color: var(--message-color) !important;
 	border-radius: var(--message-radius);
 	transition: 300ms ease background-color;
+	backdrop-filter: blur(1px);
 
 	&:not(#{c(chat messageGroupStart)}),
     &#{c(chat compact)} {
@@ -179,7 +180,7 @@
 #{c(chat divider content)} {
 	width: 120px;
 	padding: 2px 0;
-	background-color: var(--message-color);
+	background-color: none;
 	text-align: center;
 }
 
