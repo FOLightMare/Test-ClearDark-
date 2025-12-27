@@ -706,6 +706,7 @@ code {
   background-color: var(--message-color) !important;
   border-radius: var(--message-radius);
   transition: 300ms ease background-color;
+  backdrop-filter: blur(1px);
 }
 ._5126c0cd07f243a0-message:not(._5126c0cd07f243a0-groupStart), ._5126c0cd07f243a0-message.c19a557985eb7793-compact {
   margin-top: 2px;
@@ -816,7 +817,7 @@ code {
 ._908e20001ad67812-content {
   width: 120px;
   padding: 2px 0;
-  background-color: var(--message-color);
+  background-color: none;
   text-align: center;
 }
 
