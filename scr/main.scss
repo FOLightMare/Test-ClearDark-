@@ -85,6 +85,11 @@ $calc: h calc(#{$sf} * s) l / alpha; // avoid repetition
   --accent-text-color: hsl(216,17%,94%);
 
   --reply-accent: #738292;
+  --reply-hue: 211;
+  --reply-saturation: 12%;
+  --reply-lightness: 51%;
+  --reply-hsl: var(--reply-hue),calc(var(--reply-saturation) * var(--saturation-factor)),var(--reply-lightness);
+  --reply-opacity: 1;
 
   --background-shading-percent: 100%;
   --background-image: url(https://fo-lighty.github.io/ClearDark-Plus/assets/images/Samurai.jpeg);
