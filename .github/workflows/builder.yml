@@ -1,7 +1,3 @@
-files: |
-            main.css
-            betterdiscord.cssname: Builder
-
 on:
   push:
     branches:
@@ -42,6 +38,6 @@ jobs:
         with:
           commit_message: 'CSS Version updated'
           files: |
-            css/main.css
-            css/additional.css
+            main.css
+            additional.css
           commit_user_name: "Lighty's Compiler Bot"
