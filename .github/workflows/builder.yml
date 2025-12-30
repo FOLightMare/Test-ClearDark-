@@ -34,7 +34,7 @@ jobs:
         # The 'main.css' destination is at the root, which is ideal for Discord
         run: |
           sass scr/main.scss main.css --load-path=scr --no-source-map
-          sass scr/betterdiscord.scss betterdiscord.css --load-path=scr --no-source-map
+          sass scr/betterdiscord.scss additional.css --load-path=scr --no-source-map
 
       # 5. Update the main.css file on GitHub
       - name: Deploy
@@ -43,5 +43,5 @@ jobs:
           commit_message: 'CSS Version updated'
           files: |
             main.css
-            betterdiscord.css
+            additional.css
           commit_user_name: "Lighty's Compiler Bot"
