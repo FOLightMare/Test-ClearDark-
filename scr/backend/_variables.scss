@@ -97,6 +97,11 @@ $cv: (
       code: var(--code-font),
     ),
 
+  // BOX-SHADOW - SHADOW TO THE CONTENT TO MAKE IT MORE ALIVE
+  shadow: (
+      bottom: var(--card-header-shadow),
+    ),
+
   // These only have the image, attachment and filter variables.
   // Default for full background shorthand is as follows:
   // shorthand: var(img) <position> / <size> <repeat> var(attachment)
