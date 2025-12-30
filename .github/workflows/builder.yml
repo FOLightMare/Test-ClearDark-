@@ -1,4 +1,6 @@
-name: Builder
+files: |
+            main.css
+            betterdiscord.cssname: Builder
 
 on:
   push:
@@ -39,5 +41,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'CSS Version updated'
-          files: 'main.css'
+          files: |
+            main.css
+            betterdiscord.css
           commit_user_name: "Lighty's Compiler Bot"
