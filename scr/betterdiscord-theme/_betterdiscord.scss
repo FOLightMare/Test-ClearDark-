@@ -69,8 +69,8 @@
   }
   //buttons
   #{c(bd controls)} {
-  #{c(bd button)}#{c(other cv bdSettingsSidebarItemSelected)} {
-    background-color: cv('color.main');
+    #{c(bd button)}#{c(other cv bdSettingsSidebarItemSelected)} {
+      background-color: cv('color.main');
+    }
   }
-}
 }
