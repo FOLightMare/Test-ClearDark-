@@ -2,7 +2,7 @@
 @use 'sass:string';
 @use 'start' as *;
 
-/// Get a variable from the ClearVision variables map
+/// Get a variable from the ClearDark+ variables map
 /// @param {string} $id identification for a variable
 /// @return {*} variable
 @function cv($id) {
@@ -36,7 +36,7 @@
   @return $r;
 }
 
-// CLEARVISION VARIABLES
+// CLEARDARK+ VARIABLES
 $cv: (
   // These colors are the hidden "backend" colors.
   // The default values for these contain calculations involving `var(--saturation-factor,1)`.
