@@ -1,3 +1,5 @@
+name: Builder
+
 on:
   push:
     branches:
@@ -27,9 +29,9 @@ jobs:
 
       # 4. Execute compilation: src/main.scss -> main.css
       - name: Builder CSS
-        # The 'main.css' destination is at the root, which is ideal for Discord
+        # The destination is at the root, which is ideal for Discord
         run: |
-          sass scr/main.scss css/main.css --load-path=scr --no-source-map
+          sass scr/main.scss css/source.css --load-path=scr --no-source-map
           sass scr/betterdiscord.scss css/additional.css --load-path=scr --no-source-map
 
       # 5. Update the main.css file on GitHub
