@@ -1,9 +1,5 @@
 @use 'backend' as *;
 
-#{c(radio base)} {
-  stroke:cv('icon.strong');
-  stroke-width: 4;
-}
 // SELECTED
 :is(#{c(radio groupOption)}, #{c(radio standaloneIndicator)}) {
   &[data-selected] {
