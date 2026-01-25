@@ -46,6 +46,11 @@
   box-shadow: none;
 }
 
+// BOT EMBED CONTAINER
+#{c(embeds embedBotContainer)} {
+  background: cv('shading.card');
+}
+
 // NO CHANNELS
 #{c(chat noChannel)} {
   background: hsl(from cv('shading.bg') h s l/calc(cv('shading.percent') * 0.4));
