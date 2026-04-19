@@ -731,7 +731,7 @@ code {
   display: none;
 }
 .message__5126c.wrapper_c19a55 .repliedMessage_c19a55:before {
-  border-color: hsl(var(--mention-hsl));
+  border-color: hsl(var(--mention-color));
 }
 .message__5126c.wrapper_c19a55 .repliedMessageClickableSpine_c19a55 {
   --message-color: hsl(var(--mention-color));
