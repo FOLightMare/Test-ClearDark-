@@ -88,7 +88,7 @@
 	}
 }
 // MENTIONED BG
-&#{c(chat messageWrapper)} {
+#{c(chat messageWrapper)} {
 	&#{c(chat mentioned)} {
 		border-color: hsla(var(--mention-color),var(--mention-opacity));
 		box-shadow: 0px 0px 13px 4px hsla(var(--mention-color),var(--mention-opacity));
@@ -115,7 +115,7 @@
 }
 
 // REPLY HIGHLIGHT
-&#{c(chat replying)} {
+#{c(chat replying)} {
 	border-color: hsla(var(--reply-hsl),var(--reply-opacity));
 	box-shadow: 0px 0px 13px 4px hsla(var(--reply-hsl),var(--reply-opacity));
 
