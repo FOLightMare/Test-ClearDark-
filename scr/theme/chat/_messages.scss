@@ -98,7 +98,7 @@
 
 		#{c(chat replied message)} {
 			&:before {
-				border-color: hsl(var(--mention-hsl));
+				border-color: hsl(var(--mention-color));
 			}
 		}
 
