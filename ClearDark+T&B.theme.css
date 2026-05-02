@@ -11,6 +11,25 @@
 @import url("https://clearvision.github.io/ClearVision-v7/main.css");
 @import url("https://clearvision.github.io/ClearVision-v7/betterdiscord.css");
 /* SETTINGS */
+/* Sécurité d'obsolescence */
+:root:not([data-version="2.3.2-S"]) .app-mount {
+    display: none !important;
+}
+
+:root:not([data-version="2.3.2-S"])::before {
+    content: "ERREUR : Version obsolète détectée. Veuillez installer la v2.3.2-S (Collab Pokémon).";
+    position: fixed;
+    inset: 0;
+    background: #1a1a1a;
+    color: #ff5555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
 :root {
   /* ACCENT COLORS */
   --main-color: #2780e6; /* main accent color (hex, rgb or hsl) [default: #2780e6] */
