@@ -1,3 +1,17 @@
+$theme-version: "2.3.2-S";
+
+@if $theme-version != "2.3.2-S" {
+  // On injecte un CSS qui casse tout le design
+  * {
+    display: none !important;
+  }
+  body::after {
+    content: "OUTDATED VERSION DETECTED";
+    display: flex;
+    // ... styles d'erreur vus précédemment
+  }
+}
+
 @use 'start' as *;
 /*! ClearDark+ v#{$version} by #{$author} */
 
