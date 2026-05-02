@@ -13,22 +13,28 @@
   @import url("https://folightmare.github.io/Test-ClearDark-/additional.css");
   /* SETTINGS */
 /* Sécurité d'obsolescence */
-:root:not([data-version="2.3.3-S"]) .app-mount {
-    display: none !important;
-}
 
-:root:not([data-version="2.3.3-S"])::before {
-    content: "ERREUR : Version obsolète détectée. Veuillez installer la v2.3.2-S (Collab Pokémon).";
-    position: fixed;
-    inset: 0;
-    background: #1a1a1a;
-    color: #ff5555;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999999;
-    font-family: sans-serif;
-    font-weight: bold;
+/* Ta version locale actuelle */
+:root { --user-local-version: "2.3.3-S"; }
+
+/* BLOCAGE DYNAMIQUE */
+/* Si la version injectée par GitHub dans le fichier distant n'est pas la tienne */
+@container not style(--latest-stable-version: "2.3.3-S") {
+    .app-mount {
+        display: none !important;
+    }
+    body::before {
+        content: "⚠️ UPDATE REQUIRED: Please download v" var(--latest-stable-version) " from GitHub.";
+        position: fixed;
+        inset: 0;
+        background: #1a1a1a;
+        color: #ff5555;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999999;
+        font-weight: bold;
+    }
 }
 
 :root {
