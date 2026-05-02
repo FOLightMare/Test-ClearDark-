@@ -19,7 +19,7 @@
 
 /* BLOCAGE DYNAMIQUE */
 /* Si la version injectée par GitHub dans le fichier distant n'est pas la tienne */
-@container not style(--latest-stable-version: "2.3.3-S") {
+@container not style(--user-local-version: var(--latest-stable-version)) {
     .app-mount {
         display: none !important;
     }
