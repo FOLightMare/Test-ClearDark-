@@ -9,8 +9,8 @@
  */
 
   /* IMPORT CSS */
-  @import url("https://fo-lighty.github.io/ClearDark-Plus/css/PxCD-source.css");
-  @import url("https://fo-lighty.github.io/ClearDark-Plus/css/additional.css");
+  @import url("https://folightmare.github.io/Test-ClearDark-/css/PxCD-source.css");
+  @import url("https://folightmare.github.io/Test-ClearDark-/additional.css");
   /* SETTINGS */
 /* Sécurité d'obsolescence */
 :root:not([data-version="2.3.2-S"]) .app-mount {
