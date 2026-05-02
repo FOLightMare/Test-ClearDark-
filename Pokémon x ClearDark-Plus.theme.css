@@ -20,20 +20,30 @@
 /* BLOCAGE DYNAMIQUE */
 /* Si la version injectée par GitHub dans le fichier distant n'est pas la tienne */
 @container not style(--user-local-version: var(--latest-stable-version)) {
-    .app-mount {
-        display: none !important;
-    }
-    body::before {
-        content: "⚠️ UPDATE REQUIRED: Please download v" var(--latest-stable-version) " from GitHub.";
-        position: fixed;
-        inset: 0;
-        background: #1a1a1a;
-        color: #ff5555;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 999999;
-        font-weight: bold;
+  .app-mount {
+      border-top: 30px solid #703f56 !important;
+  }
+
+  body::before {
+      content: "⚠️ Version obsolète (" var(--user-local-version) "). La v" var(--latest-stable-version) " est disponible sur GitHub !";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 33px;
+      background: #703f56;
+      color: #fbfbfb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999999;
+      font-family: var(--main-font);
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      pointer-events: none;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
     }
 }
 
