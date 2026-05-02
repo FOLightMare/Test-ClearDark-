@@ -25,7 +25,7 @@
   }
 
   body::before {
-      content: "⚠️ Version obsolète (" var(--user-local-version) "). La v" var(--latest-stable-version) " est disponible sur GitHub !";
+      content: "⚠️ Version obsolète (" var(--user-local-version) "). La v" var(--latest-stable-version) " est disponible sur GitHub ! ⚠️";
       position: fixed;
       top: 0;
       left: 0;
