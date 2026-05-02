@@ -13,11 +13,11 @@
   @import url("https://folightmare.github.io/Test-ClearDark-/additional.css");
   /* SETTINGS */
 /* Sécurité d'obsolescence */
-:root:not([data-version="2.3.2-S"]) .app-mount {
+:root:not([data-version="2.3.3-S"]) .app-mount {
     display: none !important;
 }
 
-:root:not([data-version="2.3.2-S"])::before {
+:root:not([data-version="2.3.3-S"])::before {
     content: "ERREUR : Version obsolète détectée. Veuillez installer la v2.3.2-S (Collab Pokémon).";
     position: fixed;
     inset: 0;
