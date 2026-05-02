@@ -34,11 +34,7 @@ $calc: h calc(#{$sf} * s) l / alpha; // avoid repetition
     --hsl-input-border-shading: hsl(from var(--hsl-input-shading) h s l/.1);
   }
 }
-:root {
-  /* AUTO-GENERATED VERSION - DO NOT EDIT MANUALLY */
-  --latest-stable-version: "2.3.3-S";
-  /* END OF AUTO-GENERATION */
-  
+:root { 
   // generic colors
   --hsl-main-color: hsl(from var(--main-color) #{$calc});
   --hsl-hover-color: hsl(from var(--hover-color) #{$calc});
