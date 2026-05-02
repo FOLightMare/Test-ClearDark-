@@ -3787,6 +3787,10 @@ code {
   display: none;
 }
 
+:root {
+  --latest-stable-version: "2.3.3-S";
+}
+
 /* Default Variables */
 :is(.theme-light, .theme-dark, .theme-darker, .theme-midnight), :is(.theme-light, .theme-dark, .theme-darker, .theme-midnight):is(.theme-light, .theme-dark) {
   --text-default: hsl(from var(--normal-text) h calc(var(--saturation-factor, 1) * s) l/alpha);
@@ -3804,7 +3808,9 @@ code {
 }
 
 :root {
-  --latest-stable-version: 233;
+  /* AUTO-GENERATED VERSION - DO NOT EDIT MANUALLY */
+  --latest-stable-version: "2.3.3-S";
+  /* END OF AUTO-GENERATION */
   --hsl-main-color: hsl(from var(--main-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
   --hsl-hover-color: hsl(from var(--hover-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
   --hsl-success-color: hsl(from var(--success-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
