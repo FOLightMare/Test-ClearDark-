@@ -35,8 +35,10 @@ $calc: h calc(#{$sf} * s) l / alpha; // avoid repetition
   }
 }
 :root {
-  // DO NOT EDIT THESE -- VARIABLES ARE NOT TO BE DISTRIBUTED TO END USER.
-  --latest-stable-version: 233;
+  /* AUTO-GENERATED VERSION - DO NOT EDIT MANUALLY */
+    --latest-stable-version: "2.3.3-S";
+  /* END OF AUTO-GENERATION */
+  
   // generic colors
   --hsl-main-color: hsl(from var(--main-color) #{$calc});
   --hsl-hover-color: hsl(from var(--hover-color) #{$calc});
