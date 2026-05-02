@@ -1,6 +1,9 @@
 @use 'start' as *;
 /*! Pokémon x ClearDark+ v#{$version} by #{$author} */
 
+// Importe le fichier généré par le bot
+@import 'version';
+
 // Import Functions, Variables, Mixins and Class list functionality.
 @use 'backend' as *;
 
