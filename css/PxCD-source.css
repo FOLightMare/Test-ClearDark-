@@ -21,7 +21,7 @@
 }
 /*! Pokémon x ClearDark+ v2.3.2 by Lighty.Jr */
 .info__2debe::after {
-  content: "ClearDark+" " " var(--user-local-version);
+  content: "ClearDark+" " " "2.3.2";
   color: var(--text-muted);
   font-size: 12px;
   line-height: 1.3333333333;
@@ -40,7 +40,7 @@
   filter: drop-shadow(0 0 5px var(--hsl-main-color));
 }
 :is(.theme-dark, .theme-light):not(.platform-osx) .leading_c38106::after {
-  content: var(--user-local-version);
+  content: "2.3.2";
   position: static;
   margin-top: -5px;
   margin-left: 5px;
@@ -3830,6 +3830,37 @@ code {
   --font-display: var(--main-font);
   --font-code: var(--code-font);
   --focus-primary: var(--focus-color);
+  /* BLOCAGE DYNAMIQUE */
+  /* Si la version injectée par GitHub dans le fichier distant n'est pas la tienne */
+}
+@container not style(--user-local-version: var(--latest-stable-version)) {
+  :root .app-mount {
+    border-top: 30px solid var(--danger-color) !important;
+  }
+  :root body::before {
+    content: "⚠️ Version obsolète (v" var(--user-local-version) "). La v" var(--latest-stable-version) " est disponible sur GitHub ! ⚠️";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0px;
+    height: 32px;
+    background: var(--danger-color);
+    color: var(--normal-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+:root {
   --main-color: #c2be8b;
   --hover-color: #ddb39a;
   --success-color: #9d9a71;
