@@ -3831,12 +3831,12 @@ code {
   --font-code: var(--code-font);
   --focus-primary: var(--focus-color);
 }
-@container not style(--user-local-version: var(--latest-stable-version)) {
+@container not style(--user-local-version: var(--latest-stable-version-s)) {
   :root .app-mount {
     border-top: 30px solid var(--danger-color) !important;
   }
   :root body::before {
-    content: "⚠️ Outdated version (" var(--user-local-version) "). v" var(--latest-stable-version) " is available on GitHub! ⚠️";
+    content: "⚠️ Outdated version (" var(--user-local-version) "). v" var(--latest-stable-version-s) " is available on GitHub! ⚠️";
     position: fixed;
     top: 0;
     left: 0;
