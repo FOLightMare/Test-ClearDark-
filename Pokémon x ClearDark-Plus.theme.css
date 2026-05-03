@@ -12,42 +12,6 @@
   @import url("https://folightmare.github.io/Test-ClearDark-/css/PxCD-source.css");
   @import url("https://folightmare.github.io/Test-ClearDark-/additional.css");
   /* SETTINGS */
-/* Sécurité d'obsolescence */
-
-/* Ta version locale actuelle */
-:root { --user-local-version: "2.3.3-S"; }
-
-/* BLOCAGE DYNAMIQUE */
-/* Si la version injectée par GitHub dans le fichier distant n'est pas la tienne */
-@container not style(--user-local-version: var(--latest-stable-version)) {
-  .app-mount {
-      border-top: 30px solid #703f56 !important;
-  }
-
-  body::before {
-      content: "⚠️ Version obsolète (" var(--user-local-version) "). La v" var(--latest-stable-version) " est disponible sur GitHub ! ⚠️";
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 33px;
-      background: #703f56;
-      color: #fbfbfb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 999999;
-      font-family: var(--main-font);
-      font-size: 14px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-      pointer-events: none;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    }
-}
-
 :root {
   /* ACCENT COLORS */
   --main-color: #c2be8b; /* main accent color (hex, rgb or hsl) [default: #c2be8b] */
@@ -81,6 +45,8 @@
   --user-popout-filter: var(--background-filter); /* user popout background adjustments (ex: blur, saturation, brightness) (more info: https://developer.mozilla.org/en-US/docs/Web/CSS/filter) [default: var(--background-filter);] */
   /* REPLY COLOR SETTINGS */
   --reply-accent: #d4d2ae; /* reply accent color (hex, rgb or hsl) [default: #d4d2ae] */
+  /* VERSION LOCAL THEME*/
+  --user-local-version: "2.3.3-S";
   /* CARD SETTINGS */
   --card-color: hsl(0,0%,0%,0.4); /* the background color of the cards [default: hsl(0,0%,0%,0.4)] */
   --card-color-hover: hsl(0,0%,0%,0.5); /* the background color of the cards when hovered [default: hsl(0,0%,0%,0.5)] */
