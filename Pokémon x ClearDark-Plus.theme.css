@@ -92,8 +92,8 @@
   --background-shading: rgba(252, 252, 252, 0.2); /* app background shading color [default: rgba(252, 252, 252, 0.2)] */
   --card-shading: rgba(252, 252, 252, 0.3); /* cards background shading color [default: rgba(252, 252, 252, 0.3)] */
   --popout-shading: rgba(252, 252, 252, 0.7); /* popouts background shading color [default: rgba(252, 252, 252, 0.7)] */
-  --modal-shading: rgba(252, 252, 252, 0.5); /* modals background shading color [default: rgba(0, 0, 0, 0.6)] */
-  --input-shading: rgba(0, 0, 0, 0.3); /* inputs background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --modal-shading: rgba(252, 252, 252, 0.5); /* modals background shading color [default: rgba(0, 0, 0, 0.5)] */
+  --input-shading: rgba(0, 0, 0, 0.3); /* inputs background shading color [default: rgba(0, 0, 0, 0.3)] */
   --normal-text: #36363c; /* text color [default: #36363c] */
   --muted-text: #75757e; /* muted text color [default: #75757e] */
 }
@@ -114,7 +114,7 @@
   --background-shading: rgba(0, 0, 0, 0.5); /* app background shading color [default: rgba(0, 0, 0, 0.5)] */
   --card-shading: rgba(0, 0, 0, 0.3); /* cards background shading color [default: rgba(0, 0, 0, 0.3)] */
   --popout-shading: rgba(0, 0, 0, 0.7); /* popouts background shading color [default: rgba(0, 0, 0, 0.7)] */
-  --modal-shading: rgba(0, 0, 0, 0.5); /* modals background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --modal-shading: rgba(0, 0, 0, 0.5); /* modals background shading color [default: rgba(0, 0, 0, 0.5)] */
   --input-shading: rgba(255, 255, 255, 0.05); /* inputs background shading color [default: rgba(255, 255, 255, 0.05)] */
   --normal-text: #fbfbfb; /* text color [default: #fbfbfb] */
   --muted-text: #94949c; /* muted text color [default: #94949c] */
