@@ -66,7 +66,7 @@ $calc: h calc(#{$sf} * s) l / alpha; // avoid repetition
 
   /* BLOCAGE DYNAMIQUE */
   /* Si la version injectée par GitHub dans le fichier distant n'est pas la tienne */
-  @container not style(--latest-stable-version: "#{$theme-version}") {
+@container not style(--user-local-version: var(--latest-stable-version)) {
       .app-mount {
           border-top: 30px solid var(--danger-color) !important;
       }
