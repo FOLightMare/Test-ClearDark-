@@ -66,12 +66,12 @@ $calc: h calc(#{$sf} * s) l / alpha; // avoid repetition
 	
   // DO NOT EDIT THESE -- VARIABLES ARE NOT TO BE DISTRIBUTED TO END USER.
   // If the version doesn't match the latest one
-  @container not style(--user-local-version: var(--latest-stable-version)) {
+  @container not style(--user-local-version: var(--latest-stable-version-s)) {
     .app-mount {
       border-top: 30px solid var(--danger-color) !important;
     }
     body::before {
-      content: "⚠️ Outdated version (" var(--user-local-version) "). v" var(--latest-stable-version) " is available on GitHub! ⚠️";
+      content: "⚠️ Outdated version (" var(--user-local-version) "). v" var(--latest-stable-version-s) " is available on GitHub! ⚠️";
       position: fixed;
       top: 0;
       left: 0;
