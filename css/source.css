@@ -3787,6 +3787,11 @@ code {
   display: none;
 }
 
+:root {
+  --latest-stable-version: "2.3.3";
+  --latest-stable-version-s: "2.3.3-S";
+}
+
 /* Default Variables */
 :is(.theme-light, .theme-dark, .theme-darker, .theme-midnight), :is(.theme-light, .theme-dark, .theme-darker, .theme-midnight):is(.theme-light, .theme-dark) {
   --text-default: hsl(from var(--normal-text) h calc(var(--saturation-factor, 1) * s) l/alpha);
