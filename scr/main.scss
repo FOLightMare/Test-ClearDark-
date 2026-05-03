@@ -7,6 +7,9 @@
 // Contains the theme proper.
 @use 'theme';
 
+// Import bot-generated version file
+@import 'version';
+
 /* Default Variables */
 $sf: var(--saturation-factor, 1);
 $calc: h calc(#{$sf} * s) l / alpha; // avoid repetition
