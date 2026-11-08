@@ -18,7 +18,7 @@
 }
 
 // HEADER
-#{c(call clipBadgeIcon)} {
+#{c(call clipsEnabledIndicator)} #{c(call clipBadgeIcon)} {
   background: cv('color.main') !important;
 }
 
