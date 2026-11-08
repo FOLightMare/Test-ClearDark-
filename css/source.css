@@ -2855,8 +2855,16 @@ code {
 }
 
 /*! ClearDark+ v2.3.2 by Lighty.Jr */
+.modalContentInner__F9ieB {
+  background: none;
+}
+
 .fixedContent_cR4ic2::after {
   display: none;
+}
+
+.sidebar_cR4ic2 {
+  background: none;
 }
 
 .sectionLabel_cR4ic2 {
