@@ -2788,7 +2788,8 @@ code {
 }
 
 .cardPrimary_qCN-Ri, .cardPrimary_qCN-Ri.editable__73069 {
-  --__card-accent-color: var(--hsl-card-shading);
+  --__card-background-color: var(--hsl-card-shading);
+  --__card-border-color: transparent;
   background: var(--hsl-card-shading);
   border-color: transparent;
 }
