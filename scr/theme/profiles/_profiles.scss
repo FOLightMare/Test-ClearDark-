@@ -143,9 +143,25 @@
   }
 }
 
+// POPOUT LOADING
+#{c(profile popout loading profile)} {
+  background: cv('shading.popout');
+}
+#{c(profile popout loading avatar)} {
+  border: none;
+}
+
 // DM SIDE PROFILE
 #{c(profile userSidebar)} {
   &:not(#{c(profile customTheme)}) {
     background: hsl(from cv('shading.bg') h s l/calc(cv('shading.percent') * 0.3));
   }
+}
+#{c(profile sidebar footerButton)} {
+  background: transparent;
+}
+#{c(profile sidebar aside)} {
+  background: transparent;
+}#{c(profile panel)} {
+  background: cv('shading.popout');
 }
