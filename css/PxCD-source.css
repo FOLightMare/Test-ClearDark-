@@ -2583,6 +2583,7 @@ code {
   background: var(--user-popout-image) var(--user-popout-position)/var(--user-popout-size) no-repeat;
   background-attachment: var(--user-popout-attachment);
   filter: var(--user-popout-filter);
+  border-radius: inherit;
   z-index: -1;
 }
 
@@ -2594,6 +2595,7 @@ code {
   background: var(--user-modal-image) var(--user-modal-position)/var(--user-modal-size) no-repeat;
   background-attachment: var(--user-modal-attachment);
   filter: var(--user-modal-filter);
+  border-radius: inherit;
   z-index: -1;
 }
 
