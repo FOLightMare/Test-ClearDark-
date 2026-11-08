@@ -2683,8 +2683,28 @@ code {
   background: var(--user-profile-note-background-focus);
 }
 
+.profilePopout_iar92T {
+  background: var(--hsl-popout-shading);
+}
+
+.profileAvatar_iar92T {
+  border: none;
+}
+
 .user-profile-sidebar-redesign:not(.custom-user-profile-theme) {
   background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.3));
+}
+
+.footerButton_YBm90d {
+  background: transparent;
+}
+
+.aside_HbUF2J {
+  background: transparent;
+}
+
+.panel_BfN7RR {
+  background: var(--hsl-popout-shading);
 }
 
 /*! ClearDark+ v2.3.2 by Lighty.Jr */
