@@ -66,7 +66,7 @@
 		}
 
 		#{c(chat avatarDecoration)} {
-			top: 26px;
+			inset-block-start: 26px;
 		}
 	}
 
@@ -161,16 +161,20 @@
 
   #{c(chat avatarDecoration)} {
     &:not(#{c(chat compact)}) {
-      top: 0;
-      left: -54px;
+      inset-block-start: 0;
+      inset-inline-start: -54px;
     }
   }
 
   #{c(chat hasReply)} {
-    #{c(chat chatAvatar)},
-    #{c(chat avatarDecoration)} {
+    #{c(chat chatAvatar)} {
       &:not(#{c(chat compact)}) {
         top: 28px;
+      }
+    }
+    #{c(chat avatarDecoration)} {
+      &:not(#{c(chat compact)}) {
+        inset-block-start: 28px;
       }
     }
   }
@@ -178,8 +182,8 @@
 
 // AVATAR DECORATION
 #{c(chat avatarDecoration)} {
-  top: -2px;
-  left: -54px;
+  inset-block-start: -2px;
+  inset-inline-start: -54px;
 }
 
 #{c(chat subtitleContainer)} {
