@@ -715,7 +715,7 @@ code {
 .message_SY_P2T.hasReply_c19a55 .avatar_2i8Bfm {
   top: 28px;
 }
-.message_SY_P2T.hasReply_c19a55 .avatarDecoration_c19a55 {
+.message_SY_P2T.hasReply_c19a55 .avatarDecoration_2i8Bfm {
   inset-block-start: 26px !important;
   inset-inline-start: -54px !important;
 }
@@ -784,18 +784,18 @@ code {
   top: 0;
   left: -50px;
 }
-.a11y-font-scaled-down .avatarDecoration_c19a55:not(.compact_2i8Bfm) {
+.a11y-font-scaled-down .avatarDecoration_2i8Bfm:not(.compact_2i8Bfm) {
   inset-block-start: 0;
   inset-inline-start: -54px;
 }
 .a11y-font-scaled-down .hasReply_c19a55 .avatar_2i8Bfm:not(.compact_2i8Bfm) {
   top: 28px;
 }
-.a11y-font-scaled-down .hasReply_c19a55 .avatarDecoration_c19a55:not(.compact_2i8Bfm) {
+.a11y-font-scaled-down .hasReply_c19a55 .avatarDecoration_2i8Bfm:not(.compact_2i8Bfm) {
   inset-block-start: 28px;
 }
 
-.avatarDecoration_c19a55 {
+.avatarDecoration_2i8Bfm {
   inset-block-start: -2px;
   inset-inline-start: -54px;
 }
