@@ -772,6 +772,18 @@ code {
   left: -50px;
 }
 
+.message_SY_P2T [class*=avatarDecoration_] {
+  top: -2px;
+  left: -54px;
+}
+
+.message_SY_P2T[class*=hasReply_] .avatar_2i8Bfm {
+  top: 28px;
+}
+.message_SY_P2T[class*=hasReply_] [class*=avatarDecoration_] {
+  top: 26px;
+}
+
 .subtitleContainer_z_gUBg {
   box-shadow: var(--card-header-shadow);
 }
