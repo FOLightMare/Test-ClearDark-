@@ -43,6 +43,14 @@
 		border: 2px solid transparent;
 	}
 
+	&#{c(chat cozy)} {
+		#{c(chat timestamp)} {
+			&#{c(chat timestampAlt)} {
+				left: -75px;
+			}
+		}
+	}
+
 	&#{c(chat compact)} {
 		padding: 4px;
 		padding-left: 6px;
@@ -52,8 +60,22 @@
 		}
 	}
 
+	&#{c(chat hasReply)} {
+		#{c(chat chatAvatar)} {
+			top: 28px;
+		}
+
+		#{c(chat avatarDecoration)} {
+			top: 26px;
+		}
+	}
+
 	#{c(chat timestamp)} {
 		color: cv('text.normal');
+
+		&#{c(chat timestampAlt)} {
+			color: cv('text.normal');
+		}
 	}
 
 	#{c(forums textArea)} {
@@ -136,24 +158,28 @@
       left: -50px;
     }
   }
+
+  #{c(chat avatarDecoration)} {
+    &:not(#{c(chat compact)}) {
+      top: 0;
+      left: -54px;
+    }
+  }
+
+  #{c(chat hasReply)} {
+    #{c(chat chatAvatar)},
+    #{c(chat avatarDecoration)} {
+      &:not(#{c(chat compact)}) {
+        top: 28px;
+      }
+    }
+  }
 }
 
 // AVATAR DECORATION
-// Le hash de la classe change à chaque mise à jour de Discord (avatarDecoration_<hash>),
-// on cible donc le préfixe stable plutôt que la clé de la map (périmée).
-#{c(chat message)} [class*='avatarDecoration_'] {
+#{c(chat avatarDecoration)} {
   top: -2px;
   left: -54px;
-}
-
-// MESSAGE WITH A REPLY
-#{c(chat message)}[class*='hasReply_'] {
-  #{c(chat chatAvatar)} {
-    top: 28px;
-  }
-  [class*='avatarDecoration_'] {
-    top: 26px;
-  }
 }
 
 #{c(chat subtitleContainer)} {
