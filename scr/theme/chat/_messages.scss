@@ -60,7 +60,11 @@
 		}
 	}
 
-	&#{c(chat hasReply)} {
+	// MESSAGE WITH A REPLY
+	// `hasReply` peut ne plus être sur le même élément que le message : on détecte aussi
+	// la présence du bloc de réponse avec :has() pour ne pas dépendre de cette classe.
+	&#{c(chat hasReply)},
+	&:has(#{c(chat replied message)}) {
 		#{c(chat chatAvatar)} {
 			top: 28px;
 		}
@@ -167,7 +171,8 @@
     }
   }
 
-  #{c(chat hasReply)} {
+  #{c(chat hasReply)},
+  #{c(chat message)}:has(#{c(chat replied message)}) {
     #{c(chat chatAvatar)} {
       &:not(#{c(chat compact)}) {
         top: 28px;
@@ -175,7 +180,8 @@
     }
     #{c(chat avatarDecoration)} {
       &:not(#{c(chat compact)}) {
-        inset-block-start: 28px;
+        inset-block-start: 28px !important;
+        inset-inline-start: -54px !important;
       }
     }
   }
