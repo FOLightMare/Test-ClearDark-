@@ -706,7 +706,7 @@ code {
 }
 
 .cozy_2i8Bfm .timestampVisibleOnHover_2i8Bfm {
-  inset-inline-start: -75px;
+  inset-inline-start: -75px !important;
 }
 
 .wrapper_2i8Bfm.mentioned_SY_P2T {
