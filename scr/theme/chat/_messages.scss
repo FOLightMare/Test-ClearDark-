@@ -43,14 +43,6 @@
 		border: 2px solid transparent;
 	}
 
-	&#{c(chat cozy)} {
-		#{c(chat timestamp)} {
-			&#{c(chat timestampAlt)} {
-				left: -62px;
-			}
-		}
-	}
-
 	&#{c(chat compact)} {
 		padding: 4px;
 		padding-left: 6px;
@@ -61,8 +53,6 @@
 	}
 
 	// MESSAGE WITH A REPLY
-	// `hasReply` peut ne plus être sur le même élément que le message : on détecte aussi
-	// la présence du bloc de réponse avec :has() pour ne pas dépendre de cette classe.
 	&#{c(chat hasReply)},
 	&:has(#{c(chat replied message)}) {
 		#{c(chat chatAvatar)} {
@@ -91,6 +81,14 @@
  		background: cv('shading.card');
 	}
 }
+
+// TIMESTAMP SHIFT
+#{c(chat cozy)} {
+	#{c(chat timestamp)}#{c(chat timestampAlt)} {
+		inset-inline-start: -75px;
+	}
+}
+
 // MENTIONED BG
 #{c(chat messageWrapper)} {
 	&#{c(chat mentioned)} {
