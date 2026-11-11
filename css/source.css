@@ -678,9 +678,6 @@ code {
   padding-right: 8px !important;
   border: 2px solid transparent;
 }
-.message_SY_P2T.cozy_2i8Bfm .timestamp_2i8Bfm.alt_c19a55 {
-  left: -62px;
-}
 .message_SY_P2T.compact_2i8Bfm {
   padding: 4px;
   padding-left: 6px;
@@ -706,6 +703,10 @@ code {
 }
 .message_SY_P2T .container_rc97-L {
   background: var(--hsl-card-shading);
+}
+
+.cozy_2i8Bfm .timestamp_2i8Bfm.alt_c19a55 {
+  inset-inline-start: -75px;
 }
 
 .wrapper_2i8Bfm.mentioned_SY_P2T {
