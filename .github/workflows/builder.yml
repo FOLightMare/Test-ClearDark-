@@ -50,6 +50,5 @@ jobs:
           commit_message: 'CSS Version updated'
           files: |
             source.css
-            PxCD-source.css
             additional.css
           commit_user_name: "Lighty's Compiler Bot"
