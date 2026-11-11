@@ -685,17 +685,17 @@ code {
 .message_SY_P2T.compact_2i8Bfm .timestamp_2i8Bfm {
   margin-right: 0.75rem;
 }
-.message_SY_P2T.hasReply_c19a55 .avatar_2i8Bfm, .message_SY_P2T:has(.repliedMessage_2i8Bfm) .avatar_2i8Bfm {
+.message_SY_P2T.hasReply_2i8Bfm .avatar_2i8Bfm, .message_SY_P2T:has(.repliedMessage_2i8Bfm) .avatar_2i8Bfm {
   top: 28px;
 }
-.message_SY_P2T.hasReply_c19a55 .avatarDecoration_2i8Bfm, .message_SY_P2T:has(.repliedMessage_2i8Bfm) .avatarDecoration_2i8Bfm {
+.message_SY_P2T.hasReply_2i8Bfm .avatarDecoration_2i8Bfm, .message_SY_P2T:has(.repliedMessage_2i8Bfm) .avatarDecoration_2i8Bfm {
   inset-block-start: 26px !important;
   inset-inline-start: -54px !important;
 }
 .message_SY_P2T .timestamp_2i8Bfm {
   color: var(--text-default);
 }
-.message_SY_P2T .timestamp_2i8Bfm.alt_c19a55 {
+.message_SY_P2T .timestamp_2i8Bfm.alt_2i8Bfm {
   color: var(--text-default);
 }
 .message_SY_P2T .channelTextArea_owUmX8 {
@@ -705,7 +705,7 @@ code {
   background: var(--hsl-card-shading);
 }
 
-.cozy_2i8Bfm .timestamp_2i8Bfm.alt_c19a55 {
+.cozy_2i8Bfm .timestampVisibleOnHover_2i8Bfm {
   inset-inline-start: -75px;
 }
 
@@ -765,11 +765,11 @@ code {
   inset-block-start: 0;
   inset-inline-start: -54px;
 }
-.a11y-font-scaled-down .hasReply_c19a55 .avatar_2i8Bfm:not(.compact_2i8Bfm),
+.a11y-font-scaled-down .hasReply_2i8Bfm .avatar_2i8Bfm:not(.compact_2i8Bfm),
 .a11y-font-scaled-down .message_SY_P2T:has(.repliedMessage_2i8Bfm) .avatar_2i8Bfm:not(.compact_2i8Bfm) {
   top: 28px;
 }
-.a11y-font-scaled-down .hasReply_c19a55 .avatarDecoration_2i8Bfm:not(.compact_2i8Bfm),
+.a11y-font-scaled-down .hasReply_2i8Bfm .avatarDecoration_2i8Bfm:not(.compact_2i8Bfm),
 .a11y-font-scaled-down .message_SY_P2T:has(.repliedMessage_2i8Bfm) .avatarDecoration_2i8Bfm:not(.compact_2i8Bfm) {
   inset-block-start: 28px !important;
   inset-inline-start: -54px !important;
