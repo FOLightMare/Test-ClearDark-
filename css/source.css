@@ -771,7 +771,7 @@ code {
 .avatar_2i8Bfm {
   width: 40px;
   height: 40px;
-  top: 0;
+  top: 27px;
   left: -50px;
   margin-top: 0;
   transition: all 0.3s ease-in-out, transform 0.1s ease-in-out;
@@ -781,7 +781,7 @@ code {
 }
 
 .a11y-font-scaled-down .avatar_2i8Bfm:not(.compact_2i8Bfm) {
-  top: 0;
+  top: 27px;
   left: -50px;
 }
 .a11y-font-scaled-down .avatarDecoration_2i8Bfm:not(.compact_2i8Bfm) {
