@@ -674,11 +674,11 @@ code {
 
 /*! Pokémon x ClearDark+ v2.4.0-s by Lighty.Jr */
 .backgroundFlash_SY_P2T:not([style$="0);"]) {
-  background-color: hsla(var(--hsl-main-color), 0.3) !important;
+  background-color: hsl(from var(--hsl-main-color) h s l/0.3) !important;
   transition: 200ms ease-out background-color;
 }
 .backgroundFlash_SY_P2T[style="background-color: rgba(148, 156, 247, 0);"] {
-  background-color: hsla(var(--hsl-main-color), 0) !important;
+  background-color: hsl(from var(--hsl-main-color) h s l/0) !important;
   transition: 400ms background-color;
 }
 
@@ -771,7 +771,7 @@ code {
 .avatar_2i8Bfm {
   width: 40px;
   height: 40px;
-  top: 28px;
+  top: 0;
   left: -50px;
   margin-top: 0;
   transition: all 0.3s ease-in-out, transform 0.1s ease-in-out;
@@ -1066,10 +1066,10 @@ code {
 }
 
 .isUnread_4TfzT5 {
-  border-color: hsla(var(--hsl-main-color), var(--accent-opacity));
+  border-color: hsl(from var(--hsl-main-color) h s l/var(--accent-opacity, 1));
 }
 .isUnread_4TfzT5 .unreadPill_4TfzT5 {
-  background-color: hsla(var(--hsl-main-color), var(--accent-opacity));
+  background-color: hsl(from var(--hsl-main-color) h s l/var(--accent-opacity, 1));
   color: var(--accent-text-color);
   text-shadow: none;
 }
@@ -1077,8 +1077,8 @@ code {
   filter: none;
 }
 .isUnread_4TfzT5 .unreadPillCapStroke_4TfzT5 {
-  color: hsla(var(--hsl-main-color), var(--accent-opacity));
-  fill: hsla(var(--hsl-main-color), var(--accent-opacity));
+  color: hsl(from var(--hsl-main-color) h s l/var(--accent-opacity, 1));
+  fill: hsl(from var(--hsl-main-color) h s l/var(--accent-opacity, 1));
 }
 
 .repliedMessage_2i8Bfm:before {
