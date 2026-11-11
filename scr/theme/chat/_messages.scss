@@ -3,12 +3,12 @@
 // BACKGROUND FLASH
 #{c(chat backgroundFlash)} {
 	&:not([style$="0);"]) {
-		background-color: hsla(cv('color.main'), 0.3) !important;
+		background-color: hsl(from cv('color.main') h s l / 0.3) !important;
 		transition: 200ms ease-out background-color;
 	}
 
 	&[style="background-color: rgba(148, 156, 247, 0);"] {
-		background-color: hsla(cv('color.main'), 0.0) !important;
+		background-color: hsl(from cv('color.main') h s l / 0.0) !important;
 		transition: 400ms background-color;
 	}
 }
@@ -145,7 +145,7 @@
 #{c(chat chatAvatar)} {
   width: 40px;
   height: 40px;
-  top: 28px;
+  top: 0;
   left: -50px;
   margin-top: 0;
   transition:
@@ -477,10 +477,10 @@
 }
 
 #{c(chat divider isUnread)} {
-  border-color: hsla(cv('color.main'),var(--accent-opacity));
+  border-color: hsl(from cv('color.main') h s l / var(--accent-opacity, 1));
 
   #{c(chat divider unreadPill)} {
-    background-color: hsla(cv('color.main'),var(--accent-opacity));
+    background-color: hsl(from cv('color.main') h s l / var(--accent-opacity, 1));
     color: var(--accent-text-color);
     text-shadow: none;
   }
@@ -490,8 +490,8 @@
   }
 
   #{c(chat divider unreadPillCapStroke)} {
-    color: hsla(cv('color.main'),var(--accent-opacity));
-    fill: hsla(cv('color.main'),var(--accent-opacity));
+    color: hsl(from cv('color.main') h s l / var(--accent-opacity, 1));
+    fill: hsl(from cv('color.main') h s l / var(--accent-opacity, 1));
   }
 }
 
