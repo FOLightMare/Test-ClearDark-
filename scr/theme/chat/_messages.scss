@@ -87,7 +87,7 @@
 // TIMESTAMP SHIFT
 #{c(chat cozy)} {
 	#{c(chat timestampVisibleOnHover)} {
-		inset-inline-start: -75px;
+		inset-inline-start: -75px !important;
 	}
 }
 
