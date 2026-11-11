@@ -3,12 +3,12 @@
 // BACKGROUND FLASH
 #{c(chat backgroundFlash)} {
 	&:not([style$="0);"]) {
-		background-color: hsl(from cv('color.main') h s l / 0.3) !important;
+		background-color: hsla(cv('color.main'), 0.3) !important;
 		transition: 200ms ease-out background-color;
 	}
 
 	&[style="background-color: rgba(148, 156, 247, 0);"] {
-		background-color: hsl(from cv('color.main') h s l / 0.0) !important;
+		background-color: hsla(cv('color.main'), 0.0) !important;
 		transition: 400ms background-color;
 	}
 }
@@ -43,14 +43,6 @@
 		border: 2px solid transparent;
 	}
 
-	&#{c(chat cozy)} {
-		#{c(chat timestamp)} {
-			&#{c(chat timestampAlt)} {
-				left: -75px;
-			}
-		}
-	}
-
 	&#{c(chat compact)} {
 		padding: 4px;
 		padding-left: 6px;
@@ -60,27 +52,8 @@
 		}
 	}
 
-	// MESSAGE WITH A REPLY
-	// `hasReply` peut ne plus être sur le même élément que le message : on détecte aussi
-	// la présence du bloc de réponse avec :has() pour ne pas dépendre de cette classe.
-	&#{c(chat hasReply)},
-	&:has(#{c(chat replied message)}) {
-		#{c(chat chatAvatar)} {
-			top: 28px;
-		}
-
-		#{c(chat avatarDecoration)} {
-			inset-block-start: 26px !important;
-			inset-inline-start: -54px !important;
-		}
-	}
-
 	#{c(chat timestamp)} {
 		color: cv('text.normal');
-
-		&#{c(chat timestampAlt)} {
-			color: cv('text.normal');
-		}
 	}
 
 	#{c(forums textArea)} {
@@ -163,34 +136,6 @@
       left: -50px;
     }
   }
-
-  #{c(chat avatarDecoration)} {
-    &:not(#{c(chat compact)}) {
-      inset-block-start: 0;
-      inset-inline-start: -54px;
-    }
-  }
-
-  #{c(chat hasReply)},
-  #{c(chat message)}:has(#{c(chat replied message)}) {
-    #{c(chat chatAvatar)} {
-      &:not(#{c(chat compact)}) {
-        top: 28px;
-      }
-    }
-    #{c(chat avatarDecoration)} {
-      &:not(#{c(chat compact)}) {
-        inset-block-start: 28px !important;
-        inset-inline-start: -54px !important;
-      }
-    }
-  }
-}
-
-// AVATAR DECORATION
-#{c(chat avatarDecoration)} {
-  inset-block-start: -2px;
-  inset-inline-start: -54px;
 }
 
 #{c(chat subtitleContainer)} {
@@ -477,10 +422,10 @@
 }
 
 #{c(chat divider isUnread)} {
-  border-color: hsl(from cv('color.main') h s l / var(--accent-opacity, 1));
+  border-color: hsla(cv('color.main'),var(--accent-opacity));
 
   #{c(chat divider unreadPill)} {
-    background-color: hsl(from cv('color.main') h s l / var(--accent-opacity, 1));
+    background-color: hsla(cv('color.main'),var(--accent-opacity));
     color: var(--accent-text-color);
     text-shadow: none;
   }
@@ -490,8 +435,8 @@
   }
 
   #{c(chat divider unreadPillCapStroke)} {
-    color: hsl(from cv('color.main') h s l / var(--accent-opacity, 1));
-    fill: hsl(from cv('color.main') h s l / var(--accent-opacity, 1));
+    color: hsla(cv('color.main'),var(--accent-opacity));
+    fill: hsla(cv('color.main'),var(--accent-opacity));
   }
 }
 
