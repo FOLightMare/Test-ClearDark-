@@ -46,8 +46,8 @@ jobs:
         run: |
           mkdir -p css
 
-          THEME_VERSION_BASE=$(grep "@version" "ClearDark-Plus-T&B.theme.css" | awk '{print $3}')
-          THEME_VERSION_SPEC=$(grep "@version" "Pokémon x ClearDark-Plus.theme.css" | awk '{print $3}')
+          THEME_VERSION_BASE=$(grep "@version" "themes/ClearDark-Plus-T&B.theme.css" | awk '{print $3}')
+          THEME_VERSION_SPEC=$(grep "@version" "themes/Pokémon x ClearDark-Plus.theme.css" | awk '{print $3}')
 
           echo ":root {
             --latest-stable-version: \"$THEME_VERSION_BASE\";
