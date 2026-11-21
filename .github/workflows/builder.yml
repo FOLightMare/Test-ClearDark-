@@ -7,7 +7,7 @@ on:
     paths:
       # Se lance quand le SCSS ou les fichiers .theme.css (versions) changent
       - 'scr/**/*.scss'
-      - '*.theme.css'
+      - 'themes/*.theme.css'
   # Permet aussi de le lancer à la main (onglet Actions > Builder > Run workflow)
   workflow_dispatch:
 
@@ -46,8 +46,8 @@ jobs:
         run: |
           mkdir -p css
 
-          THEME_VERSION_BASE=$(grep "@version" "themes/ClearDark-Plus-T&B.theme.css" | awk '{print $3}')
-          THEME_VERSION_SPEC=$(grep "@version" "themes/Pokémon x ClearDark-Plus.theme.css" | awk '{print $3}')
+          THEME_VERSION_BASE=$(grep "@version" "ClearDark-Plus-T&B.theme.css" | awk '{print $3}')
+          THEME_VERSION_SPEC=$(grep "@version" "Pokémon x ClearDark-Plus.theme.css" | awk '{print $3}')
 
           echo ":root {
             --latest-stable-version: \"$THEME_VERSION_BASE\";
