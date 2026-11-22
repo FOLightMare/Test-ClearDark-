@@ -4449,6 +4449,7 @@ code {
   background: color-mix(in srgb, hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.5)), var(--hsl-main-color) var(--glass-tint));
   box-shadow: var(--glass-edge);
   backdrop-filter: var(--glass-filter);
+  box-shadow: none;
   width: 100%;
   left: 0;
   bottom: 0;
