@@ -524,3 +524,21 @@
     border-color: var(--message-color-hover);
   }
 }
+
+// HOVER TOOLBAR WITH FITTED CARDS
+// When the cards follow their content, the toolbar (quick reactions, reply, forward...)
+// would cover the username and the time. It moves outside the card, on its right side,
+// and the cards keep enough room on their right for it.
+@container style(--message-width: fit-content) {
+	#{c(chat message)} {
+		max-width: min(var(--message-max-width, 100%), calc(100% - var(--message-toolbar-space, 240px)));
+
+		#{c(chat buttons)} {
+			top: 0;
+			right: auto;
+			left: 100%;
+			// transparent bridge between the card and the toolbar, so the hover is not lost
+			padding-left: 6px;
+		}
+	}
+}

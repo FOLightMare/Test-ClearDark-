@@ -119,6 +119,7 @@ $calc: h calc(#{$sf} * s) l / alpha; // avoid repetition
   --message-padding-side: 8px;
   --message-width: fit-content;
   --message-max-width: 100%;
+  --message-toolbar-space: 240px;
   --accent-text-color: hsl(216,17%,94%);
 
   --reply-accent: #738292;

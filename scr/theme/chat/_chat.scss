@@ -42,9 +42,7 @@
 // TOOLBAR
 #{c(chat buttonsWrapper)},
 #{c(chat popover)}#{c(chat popover)} {
-  background-color: cv('shading.popout') !important;
-  border-color: cv('shading.popout') !important;
-  box-shadow: none;
+  @include glass($radius: var(--glass-radius), $shadow: false, $important: true);
 }
 
 // NO CHANNELS
