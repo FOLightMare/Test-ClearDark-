@@ -525,9 +525,11 @@ code {
 
 .wrapper_Z0MHyc,
 .popover_DpHsW6.popover_DpHsW6 {
-  background-color: var(--hsl-popout-shading) !important;
-  border-color: var(--hsl-popout-shading) !important;
-  box-shadow: none;
+  border: none !important;
+  border-radius: var(--glass-radius) !important;
+  background: color-mix(in srgb, var(--hsl-popout-shading), var(--hsl-main-color) var(--glass-tint)) !important;
+  box-shadow: var(--glass-edge) !important;
+  backdrop-filter: var(--glass-filter) !important;
 }
 
 .noChannel_RvzdCg {
@@ -1117,6 +1119,17 @@ code {
   border-color: var(--message-color-hover);
 }
 
+@container style(--message-width: fit-content) {
+  .message_SY_P2T {
+    max-width: min(var(--message-max-width, 100%), 100% - var(--message-toolbar-space, 240px));
+  }
+  .message_SY_P2T .buttons_SY_P2T {
+    top: 0;
+    right: auto;
+    left: 100%;
+    padding-left: 6px;
+  }
+}
 .container_BkGrJJ {
   background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.3));
 }
@@ -4969,6 +4982,7 @@ code {
   --message-padding-side: 8px;
   --message-width: fit-content;
   --message-max-width: 100%;
+  --message-toolbar-space: 240px;
   --accent-text-color: hsl(57,69%,81%);
   --reply-accent: #d4d2ae;
   --reply-hue: 57;
