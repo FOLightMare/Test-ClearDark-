@@ -1121,13 +1121,14 @@ code {
 
 @container style(--message-width: fit-content) {
   .message_SY_P2T {
-    max-width: min(var(--message-max-width, 100%), 100% - var(--message-toolbar-space, 240px));
+    max-width: min(var(--message-max-width, 100%), 100% - 84px - var(--message-toolbar-space, 240px));
   }
   .message_SY_P2T .buttons_SY_P2T {
     top: 0;
     right: auto;
     left: 100%;
-    padding-left: 6px;
+    padding-left: 8px;
+    pointer-events: auto;
   }
 }
 .container_BkGrJJ {
