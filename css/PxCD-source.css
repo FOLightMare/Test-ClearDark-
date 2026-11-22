@@ -708,6 +708,12 @@ code {
   border-radius: var(--message-radius);
   transition: 300ms ease background-color;
   backdrop-filter: blur(1px);
+  width: var(--message-width, fit-content);
+  max-width: var(--message-max-width, 100%);
+  box-sizing: border-box;
+}
+.message_SY_P2T:has(.channelTextArea_2x8-Qn) {
+  width: auto;
 }
 .message_SY_P2T:not(.groupStart_SY_P2T), .message_SY_P2T.compact_2i8Bfm {
   margin-top: 2px;
@@ -4961,6 +4967,8 @@ code {
   --message-radius: 10px;
   --message-padding-top: 8px;
   --message-padding-side: 8px;
+  --message-width: fit-content;
+  --message-max-width: 100%;
   --accent-text-color: hsl(57,69%,81%);
   --reply-accent: #d4d2ae;
   --reply-hue: 57;

@@ -708,6 +708,12 @@ code {
   border-radius: var(--message-radius);
   transition: 300ms ease background-color;
   backdrop-filter: blur(1px);
+  width: var(--message-width, fit-content);
+  max-width: var(--message-max-width, 100%);
+  box-sizing: border-box;
+}
+.message_SY_P2T:has(.channelTextArea_2x8-Qn) {
+  width: auto;
 }
 .message_SY_P2T:not(.groupStart_SY_P2T), .message_SY_P2T.compact_2i8Bfm {
   margin-top: 2px;
@@ -4882,7 +4888,6 @@ code {
   --text-brand: var(--hsl-main-color);
   --text-feedback-positive: var(--hsl-success-color);
   --text-feedback-critical: var(--hsl-danger-color);
-  --status-speaking: var(--hsl-main-color);
   --hsl-background-shading: hsl(from var(--background-shading) h calc(var(--saturation-factor, 1) * s) l/alpha);
   --hsl-card-shading: hsl(from var(--card-shading) h calc(var(--saturation-factor, 1) * s) l/alpha);
   --hsl-popout-shading: hsl(from var(--popout-shading) h calc(var(--saturation-factor, 1) * s) l/alpha);
@@ -4904,17 +4909,17 @@ code {
   --hsl-dnd-color: hsl(from var(--dnd-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
   --hsl-streaming-color: hsl(from var(--streaming-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
   --hsl-offline-color: hsl(from var(--offline-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
-  --hsl-channel-normal: var(--channel-normal, var(--channels-default));
-  --hsl-channel-muted: var(--channel-muted, var(--text-muted));
-  --hsl-channel-hover: var(--channel-hover, var(--channels-default));
-  --hsl-channel-selected: var(--channel-selected, var(--text-strong));
+  --hsl-channel-normal: var(--channel-normal);
+  --hsl-channel-muted: var(--channel-muted);
+  --hsl-channel-hover: var(--channel-hover);
+  --hsl-channel-selected: var(--channel-selected);
   --hsl-channel-selected-bg: var(--channel-selected-bg);
   --hsl-channel-unread: var(--channel-unread);
   --hsl-channel-unread-hover: var(--channel-unread-hover);
   --font-primary: var(--main-font);
   --font-display: var(--main-font);
   --font-code: var(--code-font);
-  --focus-primary: hsl(from var(--focus-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+  --focus-primary: var(--focus-color);
 }
 @container not style(--user-local-version: var(--latest-stable-version)) {
   :root .app-mount {
@@ -4962,6 +4967,8 @@ code {
   --message-radius: 10px;
   --message-padding-top: 8px;
   --message-padding-side: 8px;
+  --message-width: fit-content;
+  --message-max-width: 100%;
   --accent-text-color: hsl(216,17%,94%);
   --reply-accent: #738292;
   --reply-hue: 211;
