@@ -531,14 +531,17 @@
 // and the cards keep enough room on their right for it.
 @container style(--message-width: fit-content) {
 	#{c(chat message)} {
-		max-width: min(var(--message-max-width, 100%), calc(100% - var(--message-toolbar-space, 240px)));
+		// 84px = the card margins (68px left + 16px right)
+		max-width: min(var(--message-max-width, 100%), calc(100% - 84px - var(--message-toolbar-space, 240px)));
 
 		#{c(chat buttons)} {
 			top: 0;
 			right: auto;
 			left: 100%;
-			// transparent bridge between the card and the toolbar, so the hover is not lost
-			padding-left: 6px;
+			// transparent bridge between the card and the toolbar, so the hover is not lost.
+			// Discord turns pointer events off on this container: the bridge needs them back.
+			padding-left: 8px;
+			pointer-events: auto;
 		}
 	}
 }
