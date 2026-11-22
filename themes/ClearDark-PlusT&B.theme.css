@@ -1,16 +1,16 @@
 /**
- * @name ClearDark+-T&B
+ * @name ClearDark+
  * @author Lighty.Jr
  * @authorId 975102868564639835
  * @version 2.4.0
- * @description Version 2 of that Translucent Clear Dark Glass Discord theme (Test & Beta)
+ * @description Version 2 of that Translucent Clear Dark Glass Discord theme
  * @website https://fo-lighty.github.io/ClearDark-Plus
  * @source https://github.com/FO-Lighty/ClearDark-Plus
  */
 
   /* IMPORT CSS */
-  @import url("https://folightmare.github.io/Test-ClearDark-/css/source.css");
-  @import url("https://folightmare.github.io/Test-ClearDark-/css/additional.css");
+  @import url("https://fo-lighty.github.io/ClearDark-Plus/css/main.css");
+  @import url("https://fo-lighty.github.io/ClearDark-Plus/css/additionals.css");
   /* SETTINGS */
 :root {
   /* ACCENT COLORS */
@@ -74,6 +74,8 @@
   --message-radius: 10px; /* The border-radius of the messages [default: 10px]. */
   --message-padding-top: 8px; /* The top padding of the messages [default: 8px]. */
   --message-padding-side: 8px; /* The side padding of the messages [default: 8px]. */
+  --message-width: fit-content; /* Width of the message cards: fit-content = follows the text, username and time / auto = full width [default: fit-content]. */
+  --message-max-width: 100%; /* Maximum width of the message cards, e.g. 70% or 800px (100% = no limit) [default: 100%]. */
   /* USER MODAL BACKGROUND */
   --user-modal-image: var(--background-image); /* user modal background image (link must be HTTPS) (not applied to nitro users) [default: var(--background-image)] */
   --user-modal-position: var(--background-position); /* user modal position [default: var(--background-position)] */

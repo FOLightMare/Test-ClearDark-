@@ -31,6 +31,18 @@
 	transition: 300ms ease background-color;
 	backdrop-filter: blur(1px);
 
+	// CARD WIDTH
+	// fit-content: the card follows its content (text, username + time, reply, reactions, embeds...)
+	// auto: full width cards (previous behaviour)
+	width: var(--message-width, fit-content);
+	max-width: var(--message-max-width, 100%);
+	box-sizing: border-box;
+
+	// full width while editing a message, so the edit box stays usable
+	&:has(#{c(chatForm channelTextArea)}) {
+		width: auto;
+	}
+
 	&:not(#{c(chat messageGroupStart)}),
     &#{c(chat compact)} {
     	margin-top: 2px;
