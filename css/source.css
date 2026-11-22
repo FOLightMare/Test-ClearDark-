@@ -1120,13 +1120,17 @@ code {
 }
 
 @container style(--message-width: fit-content) {
-  .message_SY_P2T {
-    max-width: min(var(--message-max-width, 100%), 100% - 84px - var(--message-toolbar-space, 240px));
+  .messageListItem_SY_P2T {
+    container-type: inline-size;
   }
   .message_SY_P2T .buttons_SY_P2T {
+    --cd-room: calc(100cqw - 84px - 100%);
+    --cd-bar: var(--message-toolbar-space, 240px);
     top: 0;
     right: auto;
-    left: 100%;
+    left: 0;
+    margin-left: clamp(calc(100% - var(--cd-bar)), calc(100% - var(--cd-bar) + (var(--cd-room) - var(--cd-bar)) * 1000), 100%);
+    margin-top: clamp(-32px, calc((var(--cd-room) - var(--cd-bar)) * 1000), 0px);
     padding-left: 8px;
     pointer-events: auto;
   }
