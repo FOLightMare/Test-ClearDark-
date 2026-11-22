@@ -1,9 +1,9 @@
 /**
- * @name ClearDark+T&B
+ * @name ClearDark+-T&B
  * @author Lighty.Jr
  * @authorId 975102868564639835
- * @version 2.4.0-Beta
- * @description Version 2 of that Translucent Clear Dark Glass Discord theme
+ * @version 2.4.0
+ * @description Version 2 of that Translucent Clear Dark Glass Discord theme (Test & Beta)
  * @website https://fo-lighty.github.io/ClearDark-Plus
  * @source https://github.com/FO-Lighty/ClearDark-Plus
  */
@@ -76,7 +76,7 @@
   --message-padding-side: 8px; /* The side padding of the messages [default: 8px]. */
   --message-width: fit-content; /* Width of the message cards: fit-content = follows the text, username and time / auto = full width [default: fit-content]. */
   --message-max-width: 100%; /* Maximum width of the message cards, e.g. 70% or 800px (100% = no limit) [default: 100%]. */
-  --message-toolbar-space: 240px; /* With fit-content cards: room kept on the right of the cards for the hover toolbar [default: 240px]. */
+  --message-toolbar-space: 240px; /* With fit-content cards: approximate width of the hover toolbar. With less free room on the right of a card, the toolbar goes above it [default: 240px]. */
   /* USER MODAL BACKGROUND */
   --user-modal-image: var(--background-image); /* user modal background image (link must be HTTPS) (not applied to nitro users) [default: var(--background-image)] */
   --user-modal-position: var(--background-position); /* user modal position [default: var(--background-position)] */

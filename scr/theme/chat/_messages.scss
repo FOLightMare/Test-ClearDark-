@@ -527,21 +527,34 @@
 
 // HOVER TOOLBAR WITH FITTED CARDS
 // When the cards follow their content, the toolbar (quick reactions, reply, forward...)
-// would cover the username and the time. It moves outside the card, on its right side,
-// and the cards keep enough room on their right for it.
+// would cover the username and the time. It adapts to the room left on the right of the card:
+// - short card: the toolbar sits on the right of the card, in the free space
+// - long card: the toolbar sits above the top-right corner of the card (no space is reserved)
 @container style(--message-width: fit-content) {
-	#{c(chat message)} {
-		// 84px = the card margins (68px left + 16px right)
-		max-width: min(var(--message-max-width, 100%), calc(100% - 84px - var(--message-toolbar-space, 240px)));
+	// the list item is the reference used to measure the free room on the right of the card
+	#{c(chat messageListItem)} {
+		container-type: inline-size;
+	}
 
-		#{c(chat buttons)} {
-			top: 0;
-			right: auto;
-			left: 100%;
-			// transparent bridge between the card and the toolbar, so the hover is not lost.
-			// Discord turns pointer events off on this container: the bridge needs them back.
-			padding-left: 8px;
-			pointer-events: auto;
-		}
+	#{c(chat message)} #{c(chat buttons)} {
+		// --cd-room: free room on the right of the card
+		// (list item width - card margins 68px + 16px - card width)
+		// Percentages below are in margins: they refer to the card WIDTH, even for margin-top.
+		// The values are written as raw strings so Sass does not touch these calculations.
+		--cd-room: calc(100cqw - 84px - 100%);
+		--cd-bar: var(--message-toolbar-space, 240px);
+
+		top: 0;
+		right: auto;
+		left: 0;
+		// enough room: 100% (right of the card) / not enough: 100% - toolbar width (right-aligned above)
+		margin-left: #{'clamp(calc(100% - var(--cd-bar)), calc(100% - var(--cd-bar) + (var(--cd-room) - var(--cd-bar)) * 1000), 100%)'};
+		// enough room: 0 (beside the card) / not enough: -32px (above the card)
+		margin-top: #{'clamp(-32px, calc((var(--cd-room) - var(--cd-bar)) * 1000), 0px)'};
+
+		// transparent bridge between the card and the toolbar, so the hover is not lost.
+		// Discord turns pointer events off on this container: the bridge needs them back.
+		padding-left: 8px;
+		pointer-events: auto;
 	}
 }
