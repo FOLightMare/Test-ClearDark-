@@ -690,13 +690,15 @@ code {
   background: var(--divider-color);
 }
 
-.backgroundFlash_SY_P2T:not([style$="0);"]) {
+.backgroundFlash_SY_P2T {
+  background-color: transparent !important;
+}
+.backgroundFlash_SY_P2T .message_SY_P2T {
+  transition: 400ms ease background-color;
+}
+.backgroundFlash_SY_P2T[data-flash=true] .message_SY_P2T {
   background-color: hsl(from var(--hsl-main-color) h s l/0.3) !important;
   transition: 200ms ease-out background-color;
-}
-.backgroundFlash_SY_P2T[style="background-color: rgba(148, 156, 247, 0);"] {
-  background-color: hsl(from var(--hsl-main-color) h s l/0) !important;
-  transition: 400ms background-color;
 }
 
 .full-motion .message_SY_P2T:hover {
