@@ -1139,7 +1139,7 @@ code {
     left: 0;
     box-sizing: border-box;
     margin-left: clamp(calc(100% - var(--cd-bar)), calc(100% - var(--cd-bar) + (var(--cd-room) - var(--cd-bar)) * 1000), 100%);
-    margin-top: clamp(-22px, calc((var(--cd-room) - var(--cd-bar)) * 1000), 0px);
+    margin-top: clamp(-24px, calc((var(--cd-room) - var(--cd-bar)) * 1000), 0px);
     width: clamp(0px, calc((var(--cd-bar) - var(--cd-room)) * 1000), var(--cd-bar));
     display: flex;
     justify-content: safe flex-end;
