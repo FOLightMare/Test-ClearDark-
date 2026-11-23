@@ -1119,10 +1119,12 @@ code {
   border-color: var(--message-color-hover);
 }
 
+.messageListItem_SY_P2T,
+:is(li, div):has(> .message_SY_P2T) {
+  container-type: inline-size;
+}
+
 @container style(--message-width: fit-content) {
-  .messageListItem_SY_P2T {
-    container-type: inline-size;
-  }
   .message_SY_P2T .buttons_SY_P2T {
     --cd-room: calc(100cqw - 84px - 100%);
     --cd-bar: var(--message-toolbar-space, 240px);
