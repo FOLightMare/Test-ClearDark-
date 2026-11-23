@@ -563,8 +563,9 @@
 		box-sizing: border-box;
 		// enough room: 100% (right of the card) / not enough: 100% - toolbar width
 		margin-left: #{'clamp(calc(100% - var(--cd-bar)), calc(100% - var(--cd-bar) + (var(--cd-room) - var(--cd-bar)) * 1000), 100%)'};
-		// enough room: 0 (beside the card) / not enough: -16px (on the top edge of the card)
-		margin-top: #{'clamp(-16px, calc((var(--cd-room) - var(--cd-bar)) * 1000), 0px)'};
+		// enough room: 0 (beside the card) / not enough: -22px (on the top edge of the card,
+		// high enough not to cover the reply line)
+		margin-top: #{'clamp(-22px, calc((var(--cd-room) - var(--cd-bar)) * 1000), 0px)'};
 		// enough room: 0 width, the toolbar overflows to the right of the card
 		// not enough: a box as wide as --cd-bar, with the toolbar pushed against its right edge.
 		// "safe" alignment: if the toolbar overflows the box, it starts from the left instead.
