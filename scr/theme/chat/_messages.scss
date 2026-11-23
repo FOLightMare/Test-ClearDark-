@@ -1,15 +1,18 @@
 @use 'backend' as *;
 
-// BACKGROUND FLASH
+// BACKGROUND FLASH (jump to a message, e.g. by clicking a reply)
+// Discord marks the flash with data-flash="true" on the wrapper, then "false" when it is over.
+// The flash colours the card itself instead of the whole row.
 #{c(chat backgroundFlash)} {
-	&:not([style$="0);"]) {
-		background-color: hsl(from cv('color.main') h s l / 0.3) !important;
-		transition: 200ms ease-out background-color;
+	background-color: transparent !important;
+
+	#{c(chat message)} {
+		transition: 400ms ease background-color;
 	}
 
-	&[style="background-color: rgba(148, 156, 247, 0);"] {
-		background-color: hsl(from cv('color.main') h s l / 0.0) !important;
-		transition: 400ms background-color;
+	&[data-flash="true"] #{c(chat message)} {
+		background-color: hsl(from cv('color.main') h s l / 0.3) !important;
+		transition: 200ms ease-out background-color;
 	}
 }
 
@@ -563,7 +566,7 @@
 		box-sizing: border-box;
 		// enough room: 100% (right of the card) / not enough: 100% - toolbar width
 		margin-left: #{'clamp(calc(100% - var(--cd-bar)), calc(100% - var(--cd-bar) + (var(--cd-room) - var(--cd-bar)) * 1000), 100%)'};
-		// enough room: 0 (beside the card) / not enough: -22px (on the top edge of the card,
+		// enough room: 0 (beside the card) / not enough: -24px (on the top edge of the card,
 		// high enough not to cover the reply line)
 		margin-top: #{'clamp(-24px, calc((var(--cd-room) - var(--cd-bar)) * 1000), 0px)'};
 		// enough room: 0 width, the toolbar overflows to the right of the card
