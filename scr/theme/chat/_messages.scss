@@ -531,12 +531,15 @@
 // - short card: the toolbar sits on the right of the card, in the free space
 // - long card (not enough room): the toolbar sits ON the card, on its top-right corner,
 //   exactly aligned with its right edge (like Discord), so it never goes under the member list
-@container style(--message-width: fit-content) {
-	// the list item is the reference used to measure the free room on the right of the card
-	#{c(chat messageListItem)} {
-		container-type: inline-size;
-	}
+// The direct parent of the card (the message list item, whatever its class) is the reference
+// used to measure the free room on the right of the card. If it is not a container,
+// 100cqw falls back to the window width and the toolbar always stays beside the card.
+#{c(chat messageListItem)},
+:is(li, div):has(> #{c(chat message)}) {
+	container-type: inline-size;
+}
 
+@container style(--message-width: fit-content) {
 	#{c(chat message)} #{c(chat buttons)} {
 		// --cd-room: free room on the right of the card
 		// (list item width - card margins 68px + 16px - card width)
