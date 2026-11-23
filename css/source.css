@@ -1125,6 +1125,12 @@ code {
 }
 
 @container style(--message-width: fit-content) {
+  .message_SY_P2T .buttonContainer_2i8Bfm {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+  }
   .message_SY_P2T .buttons_SY_P2T {
     --cd-room: calc(100cqw - 84px - 100%);
     --cd-bar: var(--message-toolbar-space, 240px);
@@ -1137,6 +1143,11 @@ code {
     width: clamp(0px, calc((var(--cd-bar) - var(--cd-room)) * 1000), var(--cd-bar));
     display: flex;
     justify-content: safe flex-end;
+  }
+  .message_SY_P2T .buttons_SY_P2T > * {
+    flex-shrink: 0;
+  }
+  .message_SY_P2T .buttons_SY_P2T {
     padding-left: 8px;
     padding-right: 0;
     pointer-events: auto;
