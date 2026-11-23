@@ -540,6 +540,15 @@
 }
 
 @container style(--message-width: fit-content) {
+	// Discord wraps the toolbar in a 0px wide box stuck to the right edge of the card.
+	// It is stretched over the whole card width, so the toolbar can measure the card.
+	#{c(chat message)} #{c(chat buttonContainer)} {
+		top: 0;
+		left: 0;
+		right: 0;
+		width: auto;
+	}
+
 	#{c(chat message)} #{c(chat buttons)} {
 		// --cd-room: free room on the right of the card
 		// (list item width - card margins 68px + 16px - card width)
@@ -562,6 +571,11 @@
 		width: #{'clamp(0px, calc((var(--cd-bar) - var(--cd-room)) * 1000), var(--cd-bar))'};
 		display: flex;
 		justify-content: safe flex-end;
+
+		// the toolbar keeps its own width (the box can be 0px wide)
+		> * {
+			flex-shrink: 0;
+		}
 
 		// transparent bridge between the card and the toolbar, so the hover is not lost.
 		// Discord turns pointer events off on this container: the bridge needs them back.
