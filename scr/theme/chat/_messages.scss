@@ -529,7 +529,8 @@
 // When the cards follow their content, the toolbar (quick reactions, reply, forward...)
 // would cover the username and the time. It adapts to the room left on the right of the card:
 // - short card: the toolbar sits on the right of the card, in the free space
-// - long card: the toolbar sits above the top-right corner of the card (no space is reserved)
+// - long card (not enough room): the toolbar sits ON the card, on its top-right corner,
+//   exactly aligned with its right edge (like Discord), so it never goes under the member list
 @container style(--message-width: fit-content) {
 	// the list item is the reference used to measure the free room on the right of the card
 	#{c(chat messageListItem)} {
@@ -539,7 +540,7 @@
 	#{c(chat message)} #{c(chat buttons)} {
 		// --cd-room: free room on the right of the card
 		// (list item width - card margins 68px + 16px - card width)
-		// Percentages below are in margins: they refer to the card WIDTH, even for margin-top.
+		// It is only used in margins and width: there, percentages refer to the card WIDTH.
 		// The values are written as raw strings so Sass does not touch these calculations.
 		--cd-room: calc(100cqw - 84px - 100%);
 		--cd-bar: var(--message-toolbar-space, 240px);
@@ -547,14 +548,22 @@
 		top: 0;
 		right: auto;
 		left: 0;
-		// enough room: 100% (right of the card) / not enough: 100% - toolbar width (right-aligned above)
+		box-sizing: border-box;
+		// enough room: 100% (right of the card) / not enough: 100% - toolbar width
 		margin-left: #{'clamp(calc(100% - var(--cd-bar)), calc(100% - var(--cd-bar) + (var(--cd-room) - var(--cd-bar)) * 1000), 100%)'};
-		// enough room: 0 (beside the card) / not enough: -32px (above the card)
-		margin-top: #{'clamp(-32px, calc((var(--cd-room) - var(--cd-bar)) * 1000), 0px)'};
+		// enough room: 0 (beside the card) / not enough: -16px (on the top edge of the card)
+		margin-top: #{'clamp(-16px, calc((var(--cd-room) - var(--cd-bar)) * 1000), 0px)'};
+		// enough room: 0 width, the toolbar overflows to the right of the card
+		// not enough: a box as wide as --cd-bar, with the toolbar pushed against its right edge.
+		// "safe" alignment: if the toolbar overflows the box, it starts from the left instead.
+		width: #{'clamp(0px, calc((var(--cd-bar) - var(--cd-room)) * 1000), var(--cd-bar))'};
+		display: flex;
+		justify-content: safe flex-end;
 
 		// transparent bridge between the card and the toolbar, so the hover is not lost.
 		// Discord turns pointer events off on this container: the bridge needs them back.
 		padding-left: 8px;
+		padding-right: 0;
 		pointer-events: auto;
 	}
 }
